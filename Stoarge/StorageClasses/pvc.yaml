@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: example-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce  # The volume can be mounted as read-write by a single node
+  resources:
+    requests:
+      storage: 5Gi   # The requested storage size
+  #storageClassName: standard-gce  # Reference the StorageClass created above
