@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nginx-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce  # Matches the access mode in the PV
+  resources:
+    requests:
+      storage: 1Gi  # Match the requested storage size to the PV's capacity
